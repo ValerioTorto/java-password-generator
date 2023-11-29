@@ -7,6 +7,8 @@ public class PasswordGenerator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+
+        //CHIEDO GLI INPUT ALL'UTENTE
         System.out.println("Inserisci il tuo nome: ");
         String name = input.nextLine();
 
@@ -16,11 +18,29 @@ public class PasswordGenerator {
         System.out.println("Inserisci il tuo colore preferito: ");
         String colour = input.nextLine();
 
-        System.out.print("Inserisci la tua data di nascita: ");
-        String birth = input.nextLine();
+        //CHIEDO IL GIORNO IL MESE E L'ANNO SEPARATAMENTE
+        System.out.print("Inserisci il giorno in cui sei nato/a: ");
+        int dayBirth = input.nextInt();
 
-        String total = name + " " + surname + " " + colour + " " + birth;
+        System.out.print("Inserisci il mese in cui sei nato/a: ");
+        int monthBirth = input.nextInt();
+
+        System.out.print("Inserisci l'anno in cui sei nato/a: ");
+        int yearBirth = input.nextInt();
+
+
+
+        String total = name + " " + surname + " " + colour + " " + dayBirth + " " + monthBirth + " " + yearBirth ;
         System.out.println(total);
+
+        //LI SOMMO
+        int sum = dayBirth + monthBirth + yearBirth;
+
+        //STAMPO LA PASSWORD GENERATA
+        System.out.println("La tua password generata è: " + name + "-" + surname + "-" + colour + "-" + sum);
+
+
+
 
 
 
